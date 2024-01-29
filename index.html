@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket Launch Simulation</title>
+  <link rel="shortcut icon"
+    href="https://raw.githubusercontent.com/valdir-alves3000/portfolio/main/public/assets/icons/logo.svg"
+    type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Ruslan+Display&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/colors.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/acordeon.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+
+</head>
+
+<body>
+  <header class="menu">
+    <span>Altura do Foguete</span>
+    <strong id="altitude">0 km</strong>
+    </div>
+  </header>
+  <div class="scene">
+    <div class="sidebar">
+      <span>0</span>
+    </div>
+    <div class="rocket active">
+      <img src="./assets/rocket-ship.png" alt="" />
+    </div>
+  </div>
+  <div class="action">
+    <input type="number" min="600" max="4000" />
+    <button id="takeOff">Decolar</button>
+  </div>
+
+  <div class="modal visible" id="start-modal">
+    <div class="modal-content">
+      <h2>Alcance Estelar</h2>
+      <p>
+        Bem-vindo ao <strong>Alcance Estelar</strong>, onde você tem a oportunidade de prever a altitude alcançada por
+        um foguete prestes a decolar em uma emocionante jornada pelo espaço!
+      </p>
+      <p>
+        Sua missão é estimar com precisão a altitude que o foguete atingirá. Você está pronto para desafiar os limites
+        da gravidade?
+      </p>
+
+      <button id="start">Start</button>
+
+      <section class="acordeon">
+        <button class="trigger" type="button">Sobre</button>
+
+        <ul class="content">
+          <li>
+            <strong>Instruções</strong>
+            <p>
+              Selecione um número entre 600 e 4000 para estimar a altitude que o foguete alcançará.
+            </p>
+            <p>
+              Após escolher sua estimativa, clique no botão "Decolar".
+              Observe com atenção enquanto o foguete atravessa os céus em direção ao infinito.
+            </p>
+            <p>
+              Ao final da jornada, você descobrirá se sua estimativa estava próxima do alcance real!
+            </p>
+          </li>
+          <li>
+            <strong>Dicas</strong>
+            <p>
+              Utilize seu conhecimento e intuição para fazer a melhor estimativa possível.
+            </p>
+            <p>Lembre-se das características do foguete e das condições atmosféricas que podem influenciar seu voo.
+            </p>
+            <p>A precisão é a chave para alcançar as estrelas!</p>
+          </li>
+
+          <li>
+            <p>Desafie-se e veja se consegue prever com precisão até onde nosso foguete pode chegar. </p>
+            <strong>Boa sorte, astronauta!</strong>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="final-step-modal">
+    <div class="modal-content">
+      <h2>Resultado da Missão</h2>
+      <p>O foguete atingiu uma altitude de <span id="rocketAltitude">0</span>Km.</p>
+
+      <p><strong>Você estimou <span id="userEstimation">0</span>Km.</strong>
+      </p>
+      <p id="resultMessage"><strong>Ops!</strong> Parece que seu palpite não foi o esperado desta vez. Mas não desanime,
+        astronauta! <br /><br />
+        O espaço está cheio de possibilidades, e você pode tentar outra vez. A próxima missão pode ser a sua grande
+        oportunidade de acertar em cheio. <br /><br />
+
+        <strong>Mantenha-se firme e continue explorando as estrelas!</strong>
+      </p>
+      <button id="restart" onclick="window.location.reload()">Restart</button>
+    </div>
+  </div>
+  <script src="./js/engine.js" type="module" defer></script>
+</body>
+
+</html>
