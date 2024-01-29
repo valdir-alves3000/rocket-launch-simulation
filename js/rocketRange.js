@@ -5,7 +5,7 @@ function getRandom(min, max) {
 }
 
 export function rocketRange() {
-  // state.values.rocketRange = getRandom(600, 4000);
+  state.values.rocketRange = getRandom(600, 4000);
   state.view.sibebar.innerHTML = "";
   for (let i = 0; i < state.values.rocketRange; i += 100)
     state.view.sibebar.appendChild(createHeightLevel(i));

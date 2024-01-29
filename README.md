@@ -17,3 +17,7 @@ Este é um projeto de simulação de lançamento de foguete, onde os usuários t
 - HTML5
 - CSS3
 - JavaScript
+
+Visualize o projeto aqui: [Rocket Launch Simulation](https://rocket-launch-simulation.vercel.app/)
+
+Junte-se a nós nesta jornada cósmica e desafie os limites do espaço!
