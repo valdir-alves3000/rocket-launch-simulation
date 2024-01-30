@@ -5,15 +5,16 @@ function getRandom(min, max) {
 }
 
 export function rocketRange() {
-  state.values.rocketRange = getRandom(600, 4000);
+  state.values.rocketRange = Math.floor(getRandom(600, 4000));
   state.view.sibebar.innerHTML = "";
   for (let i = 0; i < state.values.rocketRange; i += 100)
     state.view.sibebar.appendChild(createHeightLevel(i));
 
-  const finalStep = createHeightLevel(state.values.rocketRange.toFixed(0));
+  const finalStep = createHeightLevel(state.values.rocketRange);
   finalStep.style.color = "#007bff";
   finalStep.style.fontWeight = "bold";
   finalStep.style.fontSize = "2rem";
+  finalStep.style.paddingBottom = "0";
   state.view.sibebar.appendChild(finalStep);
 
   animateSibebar();
